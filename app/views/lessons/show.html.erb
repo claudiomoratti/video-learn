@@ -3,3 +3,5 @@
 </h1>
 
 <iframe src="<%= @lesson.video_link %>"></iframe>
+
+<%= react_component("comments/Comments", {lesson_id: @lesson.id, greeting: "Hello from react-rails."}) %>
