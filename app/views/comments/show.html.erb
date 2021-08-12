@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lesson:</strong>
+  <%= @comment.lesson_id %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @comment.author %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @comment.content %>
+</p>
+
+<p>
+  <strong>Reported count:</strong>
+  <%= @comment.reported_count %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_comment_path(@lesson, @comment) %> |
+<%= link_to 'Back', lesson_comments_path(@lesson) %>

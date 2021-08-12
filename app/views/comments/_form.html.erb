@@ -1,0 +1,37 @@
+<%= form_with(model: comment, url: [@lesson, comment]) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+        <% comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :course_id %>
+    <%= form.text_field :course_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reported_count %>
+    <%= form.number_field :reported_count %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

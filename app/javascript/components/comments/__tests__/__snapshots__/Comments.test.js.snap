@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments Renders default Comments 1`] = `
+<div>
+  <span>
+    Ciao :)
+  </span>
+  <span>
+    5
+  </span>
+</div>
+`;
